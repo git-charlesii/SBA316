@@ -51,3 +51,23 @@ console.log(body)
 p.style.fontFamily = "sans-serif";
 console.log(p.innerText);
 
+
+// (attempt at) opening and closing popup window when image is clicked
+let myWindow;
+
+function newWindow() {
+  myWindow = window.open(
+    "./images/NewOrleans_IsoMap_FINAL_Screen_95202150-e8d9-4aa0-9530-b5941ffa9252.png",
+    "new_orleans_map",
+    "width=800, height=400, resizable=yes, scrollbars=yes, location=yes"
+  );
+  myWindow.focus();
+}
+function closeWindow() {
+  myWindow.close();
+}
+
+document.getElementById("altButton").addEventListener("click", newWindow);
+document
+.getElementById("altButton")
+.addEventListener("click", closeWindow);
