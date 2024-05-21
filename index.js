@@ -11,9 +11,17 @@ const img = document.createElement("img");
 h1.textContent="New Orleans Nightlife";
 h1.style.color = "gold";
 h1.style.backgroundColor = "purple";
-h1.classList.add("heading_1");
+// h1.classList.add("heading_1");
 h1.style.height = "200px";
+h1.style.fontSize = "95px";
+h1.style.borderRadius = "40px"
 
+const text = "<h2>Sign Up Here!</h2>";
+
+main.innerHTML = text;
+
+
+// email signup 
 function validateEmail() {
   var email = document.getElementById("email").value;
   if (email.includes("@")) {
@@ -24,7 +32,6 @@ function validateEmail() {
 }
 
 
-// const firstbtn = document.querySelector(".first-btn");
 form.addEventListener("submit",(event) =>{
   event.preventDefault();
   console.log(input.value);
@@ -43,31 +50,34 @@ body.appendChild(p);
 body.appendChild(form);
 body.appendChild(input);
 
-console.log(body)
 
 
 
 
+
+
+p.style.fontSize = "25px"
 p.style.fontFamily = "sans-serif";
 console.log(p.innerText);
 
 
 // (attempt at) opening and closing popup window when image is clicked
-let myWindow;
+// let myWindow;
 
 function newWindow() {
   myWindow = window.open(
     "./images/NewOrleans_IsoMap_FINAL_Screen_95202150-e8d9-4aa0-9530-b5941ffa9252.png",
     "new_orleans_map",
-    "width=800, height=400, resizable=yes, scrollbars=yes, location=yes"
+    "width=400, height=200, resizable=yes, scrollbars=yes, location=yes"
   );
   myWindow.focus();
 }
-function closeWindow() {
-  myWindow.close();
-}
+// commented out close window portion of code and had some success
+// function closeWindow() {
+//   myWindow.close();
+// }
 
-document.getElementById("altButton").addEventListener("click", newWindow);
-document
-.getElementById("altButton")
-.addEventListener("click", closeWindow);
+document.querySelector("a").addEventListener("click", newWindow);
+document.querySelector("altButton")
+// document.addEventListener("click", closeWindow);
+

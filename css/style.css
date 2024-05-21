@@ -4,3 +4,17 @@ img {
 
 }
 
+.heading-images {
+  display: flex;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  
+}
+
+p {
+  text-align: center;
+}
