@@ -1,38 +1,45 @@
 const body = document.body;
 const h1 = document.querySelector("h1");
-const container1 = document.querySelector(".container-1");
+const container1 = document.getElementById("container1");
 const form = document.querySelector("form");
 const input= document.querySelector("input");
 const heading1 = document.querySelector("#heading1");
 const p = document.querySelector("p");
 const h2 = document.querySelector(".main");
-const img = document.createElement("img");
 
+// create element
+const img = document.createElement('img');
+img.src = "./images/morgan-petroski-ZCX1Nyok66c-unsplash.jpg";
+img.alt = 'New Orleans musicians playing music';
+// append new element to parent
+container1.appendChild(img);
+// add text content
 h1.textContent="New Orleans Nightlife";
+
+// styling h1 element
 h1.style.color = "gold";
 h1.style.backgroundColor = "purple";
-// h1.classList.add("heading_1");
 h1.style.height = "200px";
 h1.style.fontSize = "95px";
 h1.style.borderRadius = "40px"
 
+// add text to h2 element
 const text = "<h2>Sign Up Here!</h2>";
 
-main.innerHTML = text;
+// main.innerHTML = text;
 
 
-// email signup 
+// form - email signup 
 function validateEmail() {
-  var email = document.getElementById("email").value;
+  const email = document.getElementById("email").value;
   if (email.includes("@")) {
     alert("Thank you for subscribing!");
   } else {
     alert("Please enter a valid email address.");
   }
 }
-
-
-form.addEventListener("submit",(event) =>{
+  
+  form.addEventListener("submit",(event) =>{
   event.preventDefault();
   console.log(input.value);
   
